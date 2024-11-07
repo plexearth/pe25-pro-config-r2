@@ -31,8 +31,12 @@
         "Global.Timelines.Views"
       ],
       "onNewQuickView": [
-        "Global.Images",
         "Global.QuickViews"
+      ],
+      "onNewTransitoryView": [
+        "Global.Images",
+        "Global.Images.Impressions",
+        "Global.Images.Previews"
       ],
       "onFetchRestore": [
         "Global.Images.Impressions"
@@ -168,8 +172,9 @@
             "Providers.GoogleMaps.Images",
             "Providers.GoogleMaps.Impressions"
           ],
-          "onNewQuickView": [
-            "Providers.GoogleMaps.QuickViews"
+          "onNewTransitoryView": [
+            "Providers.GoogleMaps.Images",
+            "Providers.GoogleMaps.Impressions"
           ],
           "onFetchRestore": [
             "Providers.GoogleMaps.Impressions"

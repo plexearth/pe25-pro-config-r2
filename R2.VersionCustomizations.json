@@ -58,7 +58,8 @@
       "onSignIn": "onSignIn",
       "onHelp": "onHelp",
       "onSwitchEdition": "onSwitchEdition",
-      "onAddCredits": "onAddCredits"
+      "onAddCredits": "onAddCredits",
+      "onServicePlans": "onServicePlans"
     },
     "commerce": {
       "defaultCurrency": "EUR",
@@ -144,20 +145,7 @@
     "NOW_UTC": "[$now]"
   },
   "sysStrings": {},
-  "sysConstants": {
-    "[$URL_PAGE_GOTO_PLUGIN]": "[$URL_ROOT_GOTO]/[$PROD_REF]/plugin",
-    "[$URL_PAGE_HELP]": "[$URL_PAGE_GOTO_PLUGIN]/help",
-    "[$URL_PAGE_WHATSNEW]": "[$URL_PAGE_GOTO_PLUGIN]/whatsnew",
-    "[$URL_PAGE_ADDCREDITS]": "[$URL_PAGE_GOTO_PLUGIN]/addcredits",
-    "[$URL_PAGE_DOWNLOAD]": "[$URL_PAGE_GOTO_PLUGIN]/download",
-    "[$URL_PAGE_LEARNMORE]": "[$URL_PAGE_GOTO_PLUGIN]/learnmore",
-    "[$URL_PAGE_PRICING]": "[$URL_PAGE_GOTO_PLUGIN]/pricing",
-    "[$URL_PAGE_UPGRADE]": "[$URL_PAGE_GOTO_PLUGIN]/upgrade",
-    "[$URL_PAGE_CONTACT_SALES]": "[$URL_PAGE_GOTO_PLUGIN]/sales",
-    "[$URL_PAGE_CONTACT_SUPPORT]": "[$URL_PAGE_GOTO_PLUGIN]/support",
-    "[$URL_PRODUCT]": "[$URL_PAGE_GOTO_PLUGIN]/website",
-    "[$EMAIL_SUPPORT]": "mailto:support@plexscape.com"
-  },
+  "sysConstants": {},
   "sysConditionSets": {
     "IS_GOOD_MAP_EXPLORER": {
       "conditions": [
@@ -293,6 +281,10 @@
     "onHelp": {
       "type": "gotoUrl",
       "url": "[$URL_PAGE_HELP]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&utm_medium=ribbon&utm_term=pxv_help&"
+    },
+    "onServicePlans": {
+      "type": "gotoUrl",
+      "url": "[$URL_PAGE_PRICING]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&wky=[$wky]"
     },
     "onSignIn": {
       "type": "gotoCamp",
