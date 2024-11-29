@@ -10,6 +10,9 @@
     "consumables": {
       "credits": {
         "resKey": "Consumables.Credits"
+      },
+      "images": {
+        "resKey": "Consumables.Images"
       }
     },
     "dataKeys": {
@@ -19,6 +22,8 @@
       "tagInstaller": "Data.Installer",
       "tagCulture": "Data.Culture",
       "tagScreen": "Data.Screen",
+      "tagSubShowPremiumProviders": "Sub.Settings.ShowPremiumProviders",
+      "tagStaShowPremiumProviders": "Sta.Settings.ShowPremiumProviders",
       "tagDefaultImagerySource": "Sta.Settings.DefaultImagerySource",
       "tagLatestImagerySource": "Sta.Settings.LatestImagerySource",
       "tagDefaultGeo": "Sta.Settings.DefaultGeo",
@@ -30,6 +35,12 @@
         "Consumables.Credits": {
           "name": "Credits",
           "title": "Credits (Used/Total)",
+          "showInMyAccount": "true",
+          "isCredits": "true"
+        },
+        "Consumables.Images": {
+          "name": "Images",
+          "title": "Images (Used/Total)",
           "showInMyAccount": "true",
           "isCredits": "true"
         }
@@ -48,11 +59,15 @@
       "hasGoogleEarth": "[var:[HAS_GOOGLE_EARTH]]",
       "hasKML": "[var:[HAS_KML]]",
       "hasPhotos": "[var:[HAS_PHOTOS]]",
-      "hasWorldFiles": "[var:[HAS_WORLD_FILES]]",
       "canEdit": "[var:[CAN_EDIT]]",
       "canPrint": "[var:[CAN_PRINT]]",
       "canPrintTimeline": "[var:[CAN_PRINT_TIMELINE]]",
-      "canCustomMaps": "[var:[CAN_CUSTOM_MAPS]]"
+      "canCustomMaps": "[var:[CAN_CUSTOM_MAPS]]",
+      "canQuickViewToRaster": "[var:[CAN_QUICKVIEW_TO_RASTER]]",
+      "canCreateImageryMosaic": "[var:[CAN_CREATE_IMAGERY_MOSAIC]]",
+      "canCreateImageryRaster": "[var:[CAN_CREATE_IMAGERY_RASTER]]",
+      "canCreateImageryTimeline": "[var:[CAN_CREATE_IMAGERY_TIMELINE]]",
+      "canPolygonalArea": "[var:[CAN_POLYGONAL_AREAS]]"
     },
     "events": {
       "onSignIn": "onSignIn",
@@ -102,15 +117,19 @@
               "isVisible": "[var:[IS_LITE]] ?? false",
               "isEnabled": "true"
             },
-            "PXID_PANEL_RASTER_TOOLS": {
-              "isVisible": "true",
-              "isEnabled": "true"
-            },
             "PXID_PANEL_GE": {
               "isVisible": "[var:[IS_PRO]] ?? false",
               "isEnabled": "true"
             },
             "PXID_PANEL_GE_LITE": {
+              "isVisible": "[var:[IS_LITE]] ?? false",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_RASTER_TOOLS": {
+              "isVisible": "[var:[IS_PRO]] ?? false",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_RASTER_TOOLS_LITE": {
               "isVisible": "[var:[IS_LITE]] ?? false",
               "isEnabled": "true"
             },
@@ -186,6 +205,24 @@
     "Imagery.New": {
       "isAllowed": "[var:[HAS_IMAGERY]]"
     },
+    "Imagery.AddAsMosaic": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddAsSingle": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddAsTimeline": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Mosaic": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Single": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Timeline": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
     "Imagery.AddTiles": {
       "isAllowed": "[var:[HAS_IMAGERY]]",
       "limitSets": [
@@ -231,11 +268,8 @@
     "Photos.Import": {
       "isAllowed": "[var:[HAS_PHOTOS]]"
     },
-    "WorldFiles.Import": {
-      "isAllowed": "[var:[HAS_WORLD_FILES]]"
-    },
-    "WorldFiles.Export": {
-      "isAllowed": "[var:[HAS_WORLD_FILES]]"
+    "Raster.Advanced": {
+      "isAllowed": "[var:[HAS_RASTER_ADVANCED]]"
     },
     "Raster.Tools": {
       "isAllowed": "[var:[HAS_RASTER]]"
@@ -250,11 +284,28 @@
           "key": "Consumables.Credits",
           "onReached": {
             "type": "gotoNotif",
-            "notifId": "onLimitCreditsExceeded"
+            "notifId": "ON_CONSUMABLES_CREDITS_LIMIT_REACHED"
           },
           "onExceeding": {
             "type": "gotoNotif",
-            "notifId": "onLimitCreditsExceeding"
+            "notifId": "ON_CONSUMABLES_CREDITS_LIMIT_REACHED"
+          }
+        }
+      ]
+    },
+    "Consumables.Images": {
+      "isEnabled": "true",
+      "limits": [
+        {
+          "isEnabled": "true",
+          "key": "Consumables.Images",
+          "onReached": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_IMAGES_LIMIT_REACHED"
+          },
+          "onExceeding": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_IMAGES_LIMIT_REACHED"
           }
         }
       ]
@@ -267,11 +318,11 @@
           "key": "Global.Images",
           "onReached": {
             "type": "gotoNotif",
-            "notifId": "ON_IMAGES_LIMIT_REACHED"
+            "notifId": "ON_TOTAL_IMAGES_LIMIT_REACHED"
           },
           "onExceeding": {
             "type": "gotoNotif",
-            "notifId": "ON_IMAGES_LIMIT_REACHED"
+            "notifId": "ON_TOTAL_IMAGES_LIMIT_REACHED"
           }
         }
       ]
