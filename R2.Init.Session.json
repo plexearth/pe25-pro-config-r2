@@ -47,10 +47,10 @@
   "sysConstants": {
     "[$PROD_NAME]": "Plex-Earth 2025",
     "[$PROD_VAR]": "PRO",
-    "[$PROD_REF]": "pe25",
+    "[$PROD_REF]": "pe25-pro",
     "[$URL_GLOBAL_CDN]": "https://pe25-app-cdn.plexearth360.com",
     "[$URL_ROOT_CDN]": "[$.]/cdn",
-    "[$URL_ROOT_GOTO]": "https://goto.plexearth.com/1"
+    "[$URL_ROOT_GOTO]": "https://goto.plexearth.com"
   },
   "sysConditionSets": {},
   "sysSelections": {},

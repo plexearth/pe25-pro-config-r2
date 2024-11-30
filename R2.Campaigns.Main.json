@@ -1,7 +1,7 @@
 {
   "sysStrings": {
     "URL_ON_SIGN_IN_WELCOME_IMAGE": "[$URL_ROOT_CDN]/campaigns/001-signin-welcome/image.jpg",
-    "URL_ON_SIGN_IN_WELCOME_GOTO_LEARN": "[$URL_PAGE_LEARNMORE]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&utm_medium=in_app_message&utm_term=welcome_message&utm_campaign=onboarding",
+    "URL_ON_SIGN_IN_WELCOME_GOTO_LEARN": "[$URL_PAGE_WELCOME_LEARNMORE]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&utm_medium=in_app_message&utm_term=welcome_message&utm_campaign=onboarding",
     "URL_ON_SWITCH_TO_LITE_IMAGE": "[$URL_ROOT_CDN]/campaigns/005-switch-to-lite/image.jpg",
     "URL_ON_SIGN_IN_EXPIRES_SOON_TRIAL_IMAGE": "[$URL_ROOT_CDN]/campaigns/004-expired-trial/image.jpg",
     "URL_ON_SIGN_IN_EXPIRES_SOON_TRIAL_PRICING": "[$URL_PAGE_PRICING]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&utm_medium=in_app_message&utm_term=on_trial_expired&utm_campaign=upgrade&wky=[$wky]",
