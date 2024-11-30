@@ -3,9 +3,9 @@
     "editions": {
       "PRO": {
         "sessionInitConfig": "R2.Init.Session",
-        "helpUrl": "https://goto.plexearth.com/pe25/plugin/help",
-        "downloadUrl": "https://goto.plexearth.com/pe25/plugin/download",
-        "pricingUrl": "https://goto.plexearth.com/pe25/plugin/pricing",
+        "helpUrl": "https://goto.plexearth.com/pe25-pro/plugin/help",
+        "downloadUrl": "https://goto.plexearth.com/pe25-pro/plugin/download",
+        "pricingUrl": "https://goto.plexearth.com/pe25-pro/plugin/pricing",
         "activation": {
           "canTrial": "true",
           "trialRef": "36ABAB91C2CC459EB8FCBB4C0FF3764F",
@@ -75,8 +75,8 @@
             }
           }
         },
-        "helpUrl": "https://goto.plexearth.com/pe25/plugin/help",
-        "downloadUrl": "https://goto.plexearth.com/pe25/plugin/download"
+        "helpUrl": "https://goto.plexearth.com/pe25-pro/plugin/help",
+        "downloadUrl": "https://goto.plexearth.com/pe25-pro/plugin/download"
       },
       "LITE": {
         "mainRbnTabId": "ID_TAB_PXEARTH",
